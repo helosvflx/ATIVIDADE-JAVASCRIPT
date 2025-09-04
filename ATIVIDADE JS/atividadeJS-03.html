@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: lightblue;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: cadetblue;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra o Antes e Depois!</h1>
+    <button onclick="calcularAntesEDepois()">Clique aqui</button>
+
+    <script>
+        function calcularAntesEDepois() {
+            let numero = prompt("Digite um número inteiro:");
+            
+            // Verifica se o usuário digitou algo e se é um número válido
+            if (numero !== null && numero.trim() !== "" && !isNaN(numero) && Number.isInteger(Number(numero))) {
+                numero = Number(numero);
+                let antecessor = numero - 1;
+                let sucessor = numero + 1;
+                alert("O antecessor de " + numero + " é " + antecessor + " e o sucessor é " + sucessor + ".");
+            } else {
+                alert("Por favor, digite um número inteiro válido!");
+            }
+        }
+    </script>
+</body>
+</html>

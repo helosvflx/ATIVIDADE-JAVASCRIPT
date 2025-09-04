@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas</title>
+    <style>
+        button {
+            padding: 20px;
+            background-color: powderblue;
+        }
+
+        body {
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        h3 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, seja bem vindo!</h1>
+    <h3>Responda os nossos questionamentos:</h3>
+    <button onclick="iniciou()">Comece aqui!</button>
+
+    <script>
+        function iniciou() {
+            let nome = window.prompt('Qual o seu nome?');
+            let idade = window.prompt(`Olá, ${nome}! Quantos anos você tem?`);
+            window.alert(`Que maravilha, ${nome} tem ${idade} anos!`);
+        }
+    </script>
+
+</body>
+</html>
